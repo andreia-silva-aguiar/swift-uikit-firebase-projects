@@ -8,20 +8,18 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+
 
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
-    var messages: [Message] = [
-        Message(sender: "1@2.com", body: "Hello"),
-        Message(sender: "a@b.com", body: "Hello!"),
-        Message(sender: "1@2.com", body: "What's up"),
-        Message(sender: "1@3.com", body: "What's up? I did not undertansd why you wrote this. Why you think I do not want to eat.")
-        
-        
-    ]
+    //create the reference
+    let db = Firestore.firestore()
+    
+    var messages: [Message] = []
     
     
     override func viewDidLoad() {
@@ -36,12 +34,62 @@ class ChatViewController: UIViewController {
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
 
             
-
+        loadMessage()
             
         
     }
     
+    func loadMessage() {
+        
+        //db.collection(K.FStore.collectionName).getDocuments { (querySnapshot, error) in
+        //replace getDocuments for addSnapshotListener, so every time when has a new message, the screen will updade automatic
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (querySnapshot, error) in
+            self.messages = []
+            if let e = error {
+                print("There was an issue retrieving data from Firestore. \(e)")
+                
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents{
+                    
+                    for doc in snapshotDocuments { //each doc
+                        let data = doc.data()
+                        //because the dicionary can be optional Any type, we have conditionally downcast to cast it intpo a string
+                        if let sender = data[K.FStore.senderField] as? String , let messageBody = data[K.FStore.bodyField] as? String {
+                            let newMessage = Message(sender: sender, body: messageBody)
+                            //add the message inside the message array
+                            self.messages.append(newMessage)
+                            
+
+                        }
+                        print("Current data: \(data)")
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
+                }
+            }
+        }
+    }
     @IBAction func sendPressed(_ sender: UIButton) {
+        //"?" if not nill
+        if let messageBody = messageTextfield.text , let messageSender = Auth.auth().currentUser?.email {
+            //make sure select the "addDocument" that has completion
+            db.collection(K.FStore.collectionName).addDocument(data:
+                     [K.FStore.senderField: messageSender,
+                      K.FStore.bodyField: messageBody,
+                      K.FStore.dateField: Date().timeIntervalSince1970
+                     ]) { (error) in
+                            if let error {
+                                print ("There was an issue data to firestore")
+                            } else {
+                                print ("Successfully saved data")
+                            }
+                        }
+        }
+        
     }
     
 
