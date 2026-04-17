@@ -19,3 +19,10 @@ Real-Time Synchronization: Understanding how data flows from the cloud to the UI
 Authentication Flow: Learning how to manage user sessions and secure private data.
 
 Third-Party Libraries: Exploring the power of the iOS developer community through CocoaPods.
+<img width="616" height="545" alt="Screenshot 2026-04-16 at 23 10 34" src="https://github.com/user-attachments/assets/62327374-0625-4934-b821-2295fbc50d77" />
+
+<img width="907" height="513" alt="Screenshot 2026-04-16 at 23 10 47" src="https://github.com/user-attachments/assets/46ebddbd-e2c1-4818-a6a1-3f12146aa20e" />
+
+<img width="897" height="539" alt="Screenshot 2026-04-16 at 23 10 56" src="https://github.com/user-attachments/assets/30eaf88e-39e8-4a20-b66b-08a9a8665b6b" />
+
+
