@@ -1,55 +1,21 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+Flash Chat - iOS Real-Time Messaging Study
+This repository showcases my progress in building a real-time chat application using UIKit and Firebase. This project is part of my specialized training in the iOS Development Bootcamp by Angela Yu.
 
-# Flash-Chat
+🎯 Project Overview
+Flash Chat is a modern messaging app where users can register, log in, and send messages that sync across all devices in real-time. It focuses on mastering the backend integration and complex UI flows in iOS.
 
-## Our Goal
+🛠️ Technical Implementation
+Backend with Firebase: Implemented Firebase Auth for secure user registration/login and Cloud Firestore to store and retrieve messages instantly.
 
-One of the most fundamental component of modern iOS apps is the Table View. Table Views are used everywhere from the Mail app to the Messages app. It’s a crucial part of every iOS developer’s tool belt. In this tutorial we’ll be getting to grips with Table Views, creating custom cells, and making our own cloud-based backend database. It’s going to be epic, so buckle up.
+UIKit & Auto Layout: Built the interface using Storyboards, Segues, and custom constraints for a responsive design.
 
-## What you will create
+CocoaPods Dependency Management: Integrated external libraries (like IQKeyboardManager and CLTypingLabel) to enhance user experience.
 
-Flash Chat is an internet based messaging app similar to WhatsApp, the popular messaging app that was bought by Facebook for $22 billion. We will be using a service called Firebase Firestore as a backend database to store and retrieve our messages from the cloud. 
+Advanced Swift Logic: Managed the application lifecycle, keyboard behaviors, and asynchronous data fetching.
 
-## What you will learn
+🧠 Key Takeaways
+Real-Time Synchronization: Understanding how data flows from the cloud to the UI without refreshing the screen.
 
-* How to integrate third party libraries in your app using Cocoapods and Swift Package Manager.
-* How to store data in the cloud using Firebase Firestore.
-* How to query and sort the Firebase database.
-* How to use Firebase for user authentication, registration and login.
-* How to work with UITableViews and how to set their data sources and delegates.
-* How to create custom views using .xib files to modify native design components.
-* How to embed View Controllers in a Navigation Controller and understand the navigation stack.
-* How to create a constants file and use static properties to store Strings and other constants.
-* Learn about Swift loops and create animations using loops.
-* Learn about the App Lifecycle and how to use viewWillAppear or viewWillDisappear.
-* How to create direct Segues for navigation.
+Authentication Flow: Learning how to manage user sessions and secure private data.
 
-
-# Constants
-```
-struct K {
-    static let cellIdentifier = "ReusableCell"
-    static let cellNibName = "MessageCell"
-    static let registerSegue = "RegisterToChat"
-    static let loginSegue = "LoginToChat"
-    
-    struct BrandColors {
-        static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
-        static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
-    }
-    
-    struct FStore {
-        static let collectionName = "messages"
-        static let senderField = "sender"
-        static let bodyField = "body"
-        static let dateField = "date"
-    }
-}
-
-```
-
->This is a companion project to The App Brewery's Complete App Developement Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](Documentation/readme-end-banner.png)
+Third-Party Libraries: Exploring the power of the iOS developer community through CocoaPods.
