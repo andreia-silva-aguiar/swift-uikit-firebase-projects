@@ -1,4 +1,11 @@
 Flash Chat - iOS Real-Time Messaging Study
+<img width="616" height="545" alt="Screenshot 2026-04-16 at 23 10 34" src="https://github.com/user-attachments/assets/62327374-0625-4934-b821-2295fbc50d77" />
+
+<img width="907" height="513" alt="Screenshot 2026-04-16 at 23 10 47" src="https://github.com/user-attachments/assets/46ebddbd-e2c1-4818-a6a1-3f12146aa20e" />
+
+<img width="897" height="539" alt="Screenshot 2026-04-16 at 23 10 56" src="https://github.com/user-attachments/assets/30eaf88e-39e8-4a20-b66b-08a9a8665b6b" />
+
+
 This repository showcases my progress in building a real-time chat application using UIKit and Firebase. This project is part of my specialized training in the iOS Development Bootcamp by Angela Yu.
 
 🎯 Project Overview
@@ -19,10 +26,24 @@ Real-Time Synchronization: Understanding how data flows from the cloud to the UI
 Authentication Flow: Learning how to manage user sessions and secure private data.
 
 Third-Party Libraries: Exploring the power of the iOS developer community through CocoaPods.
-<img width="616" height="545" alt="Screenshot 2026-04-16 at 23 10 34" src="https://github.com/user-attachments/assets/62327374-0625-4934-b821-2295fbc50d77" />
 
-<img width="907" height="513" alt="Screenshot 2026-04-16 at 23 10 47" src="https://github.com/user-attachments/assets/46ebddbd-e2c1-4818-a6a1-3f12146aa20e" />
 
-<img width="897" height="539" alt="Screenshot 2026-04-16 at 23 10 56" src="https://github.com/user-attachments/assets/30eaf88e-39e8-4a20-b66b-08a9a8665b6b" />
+🧠 Challenges & Solutions
+1. Modern Xcode Tooling vs. Legacy Tutorials
+Challenge: Following course materials based on older Xcode versions led to UI discrepancies, specifically regarding the "Drag and Drop" functionality in the Canvas.
+
+Solution: I researched current Apple documentation and transitioned from a visual-only workflow to a Code-First approach. I mastered using the Attributes Inspector and direct code manipulation, ensuring my skills align with modern industry standards (Xcode 15+).
+
+2. Dependency Management & Technical Conflicts
+Challenge: Integrating multiple third-party libraries (Firebase, IQKeyboardManager) through different package managers while maintaining a clean project structure.
+
+Solution: I successfully implemented a hybrid approach using both CocoaPods and Swift Package Manager (SPM). I resolved environment conflicts by utilizing the Terminal for advanced version control and project configuration.
+
+3. Git & Version Control Logic
+Challenge: Encountering "Permission Denied" and branch mismatch errors when pushing local projects to GitHub.
+
+Solution: I diagnosed SSH/HTTPS authentication issues and standardized my workflow using the Terminal. I successfully managed remote origins and branch merging to ensure a professional repository history.
+
+
 
 
