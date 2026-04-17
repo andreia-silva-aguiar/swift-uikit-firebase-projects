@@ -9,7 +9,7 @@ Backend with Firebase: Implemented Firebase Auth for secure user registration/lo
 
 UIKit & Auto Layout: Built the interface using Storyboards, Segues, and custom constraints for a responsive design.
 
-CocoaPods Dependency Management: Integrated external libraries (like IQKeyboardManager and CLTypingLabel) to enhance user experience.
+Dependency Management: Expertly integrated external libraries using both Swift Package Manager (SPM) and CocoaPods (such as IQKeyboardManager and CLTypingLabel) to streamline development and enhance user experience.
 
 Advanced Swift Logic: Managed the application lifecycle, keyboard behaviors, and asynchronous data fetching.
 
